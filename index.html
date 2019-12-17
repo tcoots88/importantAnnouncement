@@ -2,30 +2,13 @@
 <!DOCTYPE HTML> 
 <html> 
 <head> 
+  <link rel="stylesheet" href="style.css">
 </head> 
 <body> 
-<h1>Countdown Until Aguirre Turns 30!!!</h1> 
-<div id="clockdiv"> 
-  <div> 
-    <span class="days" id="day"></span> 
-    <div class="smalltext">Days</div> 
-  </div> 
-  <div> 
-    <span class="hours" id="hour"></span> 
-    <div class="smalltext">Hours</div> 
-  </div> 
-  <div> 
-    <span class="minutes" id="minute"></span> 
-    <div class="smalltext">Minutes</div> 
-  </div> 
-  <div> 
-    <span class="seconds" id="second"></span> 
-    <div class="smalltext">Seconds</div> 
-  </div> 
-</div> 
-  
-<p id="demo"></p> 
-  
-
+  .wrap{ :'ng-app' => 'app' }
+  .time-to
+    Aguirre's 30th Birthday in...
+    %span{ :'countdown' => '', :'date' => 'February 12, 2020 00:00:01' } &nbsp;
+<script src="app.js"></script>
 </body> 
 </html> 
