@@ -35,3 +35,7 @@ function run_clock(id,endtime){
 }
 run_clock('clockdiv',deadline);
 
+
+setInterval(function(){ 
+  $('.text-anim').toggleClass('animate');
+ },2000);
