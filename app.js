@@ -35,16 +35,3 @@ function run_clock(id,endtime){
 }
 run_clock('clockdiv',deadline);
 
-// // test
-// let duration = 0.8;
-// let delay = 0.3;
-// let revealText = document.querySelector(".reveal");
-// let letters = revealText.textContent.split("");
-// revealText.textContent = "";
-// let middle = letters.filter(e => e !== " ").length / 2;
-// letters.forEach((letter, i) => {
-//   let h1 = document.createElement("h1");
-//   h1.textContent = letter;
-//   h1.style.animationDelay = `${delay + Math.abs(i - middle) * 0.1}s`;
-//   revealText.append(h1);
-// });
