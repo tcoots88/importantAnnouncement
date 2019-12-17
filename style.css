@@ -13,6 +13,7 @@ font-weight: 100;
 font-size: 80px;
 margin: 40px 0px 20px;
 font-family: 'Caveat', cursive;
+text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
 }
 
 .link{
