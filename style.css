@@ -1,3 +1,5 @@
+
+
 body{
   text-align: center;
   background: #00ECB9;
@@ -8,8 +10,9 @@ font-weight: 100;
 h1{
 color: black;
 font-weight: 100;
-font-size: 40px;
+font-size: 80px;
 margin: 40px 0px 20px;
+font-family: 'Caveat', cursive;
 }
 
 .link{
@@ -59,70 +62,42 @@ background: #487;
   font-size: 16px;
 }
 
-
-/* animation */
-
-@mixin anim-filter($filter, $value) {
-  -webkit-filter: #{$filter}unquote("(#{$value})");
-    -moz-filter: #{$filter}unquote("(#{$value})");
-    -ms-filter: #{$filter}unquote("(#{$value})");
-    filter: #{$filter}unquote("(#{$value})"); 
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
 }
 
-@mixin anim-transition($property, $value) {
--webkit-transition: $property, $value;
-    -moz-transition: $property, $value;
-    -ms-transition: $property, $value;
-    transition: $property, $value;
-}
-@mixin anim-transform($property, $value) {
-  -webkit-transform:  #{$property}unquote("(#{$value})");
-    -moz-transform: #{$property}unquote("(#{$value})");
-    -ms-transform: #{$property}unquote("(#{$value})");
-    transform: #{$property}unquote("(#{$value})"); 
-}
-
-
-
-.text-anim {
-color: #ffffff;
-font-size: 32px;
-text-align: center;
-font-family: 'Oswald', sans-serif;
-font-weight: 600;
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-
-
-/* ==========================================================================
- Main Animation	 ========================================================================== */
- 
-.text-anim {
-  span {
-    opacity: 0;
-    @include anim-transition (all, 550ms);
-    @include anim-filter(blur, 25px);
-    @include anim-transform(translateZ, 0);
-}
-  
-$letters: 34; //Define number of letters in animation - including spaces
-$timing: 35ms; //Delay between letters
-
-//Sets timing differntly for each letter
-@while $letters > 0 {
-  span:nth-child(#{$letters}) 
-  { 
-    -webkit-transition-delay: $timing * $letters;
-    -moz-transition-delay: $timing * $letters;
-    -ms-transition-delay: $timing * $letters;
-    transition-delay: $timing * $letters;
-   }
-  $letters: $letters - 1;
-  }
+.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
 }
 
-//Class added that animates
-.text-anim.animate span {
-    opacity: 1;
-    @include anim-filter(blur, 0px);
+h1 {
+	font-weight: 300;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #ddd;
 }
